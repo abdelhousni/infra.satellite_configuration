@@ -2,6 +2,10 @@
 - name: Usergroups | Reset the results variable
   ansible.builtin.set_fact:
     result_api_response: {}
+    # Reset once, before the loop: get_usergroups_do_work.yaml appends one
+    # entry per user group, and with no user group the list must be empty,
+    # not the previous object type's.
+    __rs_info_list: []
 
 - name: Usergroups | Get Usergroups
   ansible.builtin.include_tasks: api_call.yaml

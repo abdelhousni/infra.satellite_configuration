@@ -2,7 +2,6 @@
 - name: External Usergroups | Reset the results variable
   ansible.builtin.set_fact:
     result_api_response: {}
-    __rs_info_list: []
     __roles_list: []
     __users_list: []
     __usergroups_list: []

@@ -1,0 +1,4 @@
+---
+bugfixes:
+  - filetree_create role - export every user group, not only the last one; the results list was reset at each iteration of the user group loop.
+  - filetree_create role - with no user group, do not write the previous object type's list (for example the content views) as ``satellite_usergroups``.
